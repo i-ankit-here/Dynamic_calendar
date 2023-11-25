@@ -1,0 +1,93 @@
+*{margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: lavender;
+}
+table{
+    width: 80vw;
+    height: 70vh;
+    padding: 5px;
+}
+th{
+    width: 10vw;
+    text-align: center;
+    padding: 6px;
+}
+td{
+    width: 10vw;
+    height: 8vh;    
+    text-align: center;
+    background-color: white;
+}
+table{
+    border-spacing:1vw;
+}
+td:hover{
+    background-color: whitesmoke;
+}
+header{
+    margin-right: 5px;
+    width: 80vw;
+    display: flex; 
+    height: 11vh;  
+    justify-content: start;
+    align-content: center;
+}
+h3{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-weight: 1000;
+}
+.inactive{
+    opacity: 50%;
+}
+button{
+    width: 50px;
+    margin-right: 10px;
+    font-size: larger;
+    font-weight: 1000;
+    padding: 12px 5px;
+    border-radius: 50%;
+    opacity: 80%;
+    background-color: transparent;
+    border-color: transparent;
+}
+button:hover{
+    background-color: grey;
+}
+
+
+.interval{
+    position: relative;
+    bottom: -1.7vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-color: transparent;
+}
+
+.current{
+    background: violet;
+}
+
+.week{
+    margin-left: 10vw;
+}
+.head{
+    border-bottom: 2px solid grey;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-style: oblique;
+}
