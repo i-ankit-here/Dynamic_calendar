@@ -35,10 +35,10 @@ const renderCalender_week = () => {
         if (i == 0) {
             tp = "<th></th>";
         }
-        else if (i > 0 && (currdate - today + i - 1) < lastDateOfMonth && (currdate - today + i - 1) > 0) {
+        else if (i > 0 && (currdate - today + i - 1) <= lastDateOfMonth && (currdate - today + i - 1) > 0) {
             tp += '<th class="head">' + (currdate - today + i - 1) + '</th>';
         }
-        else if ((currdate - today + i) > lastDateOfMonth) {
+        else if ((currdate - today + i - 1) > lastDateOfMonth) {
             tp += '<th class="inactive" "head">' + n + '</th>';
             n++;
         }
@@ -92,19 +92,19 @@ next_week.addEventListener("click", () => {
     
     let today = new Date(currYear, currMonth, currdate).getDay();
     let lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate();
-    if ((currdate + 7) < lastDateOfMonth) {
+    if ((currdate + 7) <= lastDateOfMonth) {
         currdate = currdate + 7;
     }
     else if((currdate + 7)>lastDateOfMonth){
         currdate=currdate+7-lastDateOfMonth;
         currMonth = currMonth + 1;
-        date = new Date(currYear, currMonth,currdate);
+        date = new Date(currYear, currMonth,currdate,0);
         currYear = date.getFullYear();
         currdate = date.getDate();
-        currMonth = date.getMonth();
-    }
+        currMonth = date.getMonth();    }
     else {
         let date = new Date();
     }
+    console.log(currdate, currMonth, currYear);
     renderCalender_week();
 })
